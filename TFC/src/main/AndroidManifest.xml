@@ -23,9 +23,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.tfc.patxangueitor.main"
-            android:label="main" />
-        <activity
             android:name="com.tfc.patxangueitor.signup"
             android:label="Crear nou usuari" />
         <activity
