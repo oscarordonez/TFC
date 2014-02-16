@@ -5,12 +5,12 @@
                 android:orientation="vertical"
                 android:background="#ffffffff" >
 
-    <TextView android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              android:gravity="center"
-              android:text="Subscripció Llistes"
-              android:textSize="20dp"
-              android:layout_centerInParent="true"/>
+    <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView1"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textView"/>
 
 
 </RelativeLayout>

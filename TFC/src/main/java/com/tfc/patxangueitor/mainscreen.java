@@ -24,7 +24,6 @@ public class mainscreen extends FragmentActivity implements ActionBar.TabListene
         viewPager = (ViewPager) findViewById(R.id.pager);
         actionBar = getActionBar();
         mAdapter = new TabsPagerAdapter(getSupportFragmentManager());
-
         viewPager.setAdapter(mAdapter);
         actionBar.setHomeButtonEnabled(false);
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
@@ -62,8 +61,7 @@ public class mainscreen extends FragmentActivity implements ActionBar.TabListene
     public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
         // on tab selected
         // show respected fragment view
-        viewPager.setCurrentItem(tab.getPosition());
-    }
+        viewPager.setCurrentItem(tab.getPosition());    }
 
     @Override
     public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction ft) {
