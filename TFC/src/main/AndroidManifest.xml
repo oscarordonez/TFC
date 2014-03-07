@@ -29,6 +29,10 @@
             android:name="com.tfc.patxangueitor.mainscreen"
             android:label="@string/title_activity_mainscreen" >
         </activity>
+        <activity
+            android:name="com.tfc.patxangueitor.adminlistview"
+            android:label="Gestió Llista" >
+        </activity>
     </application>
 
 </manifest>
