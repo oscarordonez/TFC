@@ -30,14 +30,13 @@
             android:label="@string/title_activity_mainscreen" >
         </activity>
         <activity
-                android:name="com.tfc.patxangueitor.adminlistview"
-                android:label="Gestió Llista" >
+            android:name="com.tfc.patxangueitor.adminlistview"
+            android:label="Gestió Llista" >
         </activity>
         <activity
-                android:name="com.tfc.patxangueitor.testscreen"
-                android:label="Prova expandable" >
+            android:name="com.tfc.patxangueitor.testscreen"
+            android:label="Prova expandable" >
         </activity>
-
     </application>
 
 </manifest>
