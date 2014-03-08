@@ -3,6 +3,7 @@ package com.tfc.adapters;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.widget.*;
 import com.tfc.patxangueitor.R;
 import android.os.Bundle;
@@ -11,31 +12,31 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.tfc.patxangueitor.adminlistview;
+import com.tfc.patxangueitor.testscreen;
 
 
-public class SubsListFragment extends Fragment {
+public class SubsListFragment extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.subslist, null);
         ExpandableListView elv = (ExpandableListView) v.findViewById(R.id.explist);
         elv.setAdapter(new SubscriptionListAdapter());
-        return v;
 
-
-        /*elv.setOnChildClickListener(new ExpandableListView.OnChildClickListener()
-        {
+        // Listview on child click listener
+        elv.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
-            public boolean onChildClick(ExpandableListView arg0, View arg1, int arg2, int arg3, long arg4)
-            {
-                Intent intent = new Intent(,adminlistview.class);
-                Bundle b = new Bundle();
-                b.putString("Status","Connected");
-                intent.putExtras(b);
-                startActivity(intent);
+            public boolean onChildClick(ExpandableListView parent, View v,
+                                        int groupPosition, int childPosition, long id) {
+                /*Toast.makeText(SubsListFragment.this.getActivity(),"Hola", Toast.LENGTH_SHORT).show();
+                return false;*/
+                Intent myIntent = new Intent(getActivity(), testscreen.class);
+                startActivity(myIntent);
                 return false;
             }
-        });*/
+        });
+        return v;
+
     }
     /*@Override
     public void onActivityCreated(Bundle savedInstanceState)
@@ -55,7 +56,7 @@ public class SubsListFragment extends Fragment {
             }
         });
     }*/
-    public class SubscriptionListAdapter extends BaseExpandableListAdapter {
+    public class SubscriptionListAdapter extends BaseExpandableListAdapter{
 
         /*private String[] groups = { "People Names", "Dog Names", "Cat Names", "Fish Names" };
 
@@ -67,6 +68,7 @@ public class SubsListFragment extends Fragment {
         };*/
         private String[] groups = { "Subscripcions"};
         private String[] children = {"Subscripció Llista 1","Subscripció Llista 2","Subscripció Llista 3"};
+        public Activity activity;
 
         @Override
         public int getGroupCount() {
@@ -116,6 +118,17 @@ public class SubsListFragment extends Fragment {
         public View getChildView(int i, int i1, boolean b, View view, ViewGroup viewGroup) {
             TextView textView = new TextView(SubsListFragment.this.getActivity());
             textView.setText(getChild(i, i1).toString());
+
+            /*view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(SubscriptionListAdapter.this.activity.getApplicationContext(),testscreen.class);
+                    Bundle b = new Bundle();
+                    b.putString("Status","Connected");
+                    intent.putExtras(b);
+                    startActivity(intent);
+                }
+            });*/
             return textView;
         }
 
