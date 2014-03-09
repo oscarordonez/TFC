@@ -3,6 +3,8 @@ package com.tfc.patxangueitor;
 import android.app.FragmentTransaction;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.view.Menu;
+import android.view.MenuInflater;
 import com.tfc.adapters.TabsPagerAdapter;
 import android.app.ActionBar;
 import android.os.Bundle;
@@ -28,6 +30,7 @@ public class mainscreen extends FragmentActivity implements ActionBar.TabListene
         actionBar.setHomeButtonEnabled(false);
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
+
         // Adding Tabs
         for (String tab_name : tabs) {
             actionBar.addTab(actionBar.newTab().setText(tab_name)
@@ -51,6 +54,13 @@ public class mainscreen extends FragmentActivity implements ActionBar.TabListene
             public void onPageScrollStateChanged(int arg0) {
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu items for use in the action bar
+        getMenuInflater().inflate(R.menu.menu_mainscreen, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override

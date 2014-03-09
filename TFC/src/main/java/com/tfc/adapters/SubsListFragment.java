@@ -20,6 +20,8 @@ public class SubsListFragment extends Fragment{
         ExpandableListView elv = (ExpandableListView) v.findViewById(R.id.explist);
         elv.setAdapter(new SubscriptionListAdapter(getActivity().getApplicationContext()));
 
+        //setHasOptionsMenu(true);
+
         // Listview on child click listener
         elv.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override

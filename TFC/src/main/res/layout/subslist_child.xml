@@ -6,7 +6,7 @@
               android:layout_height="match_parent">
 
     <TextView android:layout_width="fill_parent"
-              android:layout_height="45dip" android:paddingLeft="30dip"
+              android:layout_height="45dip" android:paddingLeft="50dip"
               android:paddingRight="5dip" android:textStyle="bold" android:textSize="17dip"
               android:gravity="center_vertical" android:id="@+id/subslistchildrow"
               android:text="Children" android:textColor="@android:color/darker_gray">
