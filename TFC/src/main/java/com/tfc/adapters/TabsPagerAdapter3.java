@@ -3,24 +3,23 @@ package com.tfc.adapters;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.widget.BaseExpandableListAdapter;
 
-public class TabsPagerAdapter extends FragmentPagerAdapter {
 
-    public TabsPagerAdapter(FragmentManager fm) {
+public class TabsPagerAdapter3 extends FragmentPagerAdapter {
+
+    public TabsPagerAdapter3(FragmentManager fm) {
         super(fm);
     }
 
     @Override
     public Fragment getItem(int index) {
-
         switch (index) {
             case 0:
                 // AdminList fragment activity
-                return new AdminListFragment();
+                return new DataFragment();
             case 1:
                 // SubsList fragment activity
-                return new SubsListFragment();
+                return new UserListFragment();
         }
         return null;
     }

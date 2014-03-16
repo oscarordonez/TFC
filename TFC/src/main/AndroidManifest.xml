@@ -19,6 +19,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -37,6 +38,23 @@
             android:name="com.tfc.patxangueitor.testscreen"
             android:label="Prova expandable" >
         </activity>
+        <activity
+                android:name="com.tfc.patxangueitor.subslistuser"
+                android:label="Subscripcions de llistes" >
+        </activity>
+        <activity
+            android:name="com.tfc.patxangueitor.eventlist"
+            android:label="Event Usuari" >
+    </activity>
+        <activity
+                android:name="com.tfc.patxangueitor.adminlistuser"
+                android:label="Admin. Llistes usuaris" >
+        </activity>
+        <activity
+                android:name="com.tfc.patxangueitor.adminlistevent"
+                android:label="Admin. Gestio Events" >
+        </activity>
+
     </application>
 
 </manifest>

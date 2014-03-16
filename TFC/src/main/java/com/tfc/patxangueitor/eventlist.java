@@ -2,6 +2,7 @@ package com.tfc.patxangueitor;
 
 import android.content.Intent;
 import android.view.View;
+import android.widget.TextView;
 import com.tfc.adapters.Group;
 import com.tfc.adapters.ExpandableListAdapter;
 import com.tfc.patxangueitor.testscreen;
@@ -11,34 +12,31 @@ import android.os.Bundle;
 import android.util.SparseArray;
 import android.widget.ExpandableListView;
 
-public class subslistuser extends Activity {
+public class eventlist extends Activity {
     // more efficient than HashMap for mapping integers to objects
     SparseArray<Group> groups = new SparseArray<Group>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.subslist);
+        setContentView(R.layout.eventdatalist);
         createData();
-        ExpandableListView listView = (ExpandableListView) findViewById(R.id.explist);
+        ExpandableListView listView = (ExpandableListView) findViewById(R.id.expEventListView);
         ExpandableListAdapter adapter = new ExpandableListAdapter(this,
                 groups);
         listView.setAdapter(adapter);
-    }
- 
-    
-    public void createData() {
-        Group group = new Group("Usuaris");
-        group.children.add("Usuari 1");
-        group.children.add("Usuari 2");
-        group.children.add("Usuari 3");
-        groups.append(0,group);
 
-        Group group2 = new Group("Events");
-        group2.children.add("Events 1");
-        group2.children.add("Events 2");
-        group2.children.add("Events 3");
-        groups.append(1,group2);
+        TextView textView = (TextView) findViewById(R.id.EventtextView);
+        textView.setText("Dades event");
+    }
+
+
+    public void createData() {
+        Group group = new Group("Usuaris Event");
+        group.children.add("Usuari event 1");
+        group.children.add("Usuari event 2");
+        group.children.add("Usuari event 3");
+        groups.append(0,group);
 
         /*for (int j = 0; j < 5; j++) {
             Group group = new Group("Test " + j);
