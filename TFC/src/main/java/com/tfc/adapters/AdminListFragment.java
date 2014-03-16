@@ -9,7 +9,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.tfc.patxangueitor.testscreen;
+import com.tfc.patxangueitor.adminlistuser;
 
 public class AdminListFragment extends Fragment {
     /*private ListView lv1;
@@ -17,7 +17,7 @@ public class AdminListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_adminlist, container, false);
+        return inflater.inflate(R.layout.adminuserlist, container, false);
     }
 
     @Override
@@ -47,7 +47,7 @@ public class AdminListFragment extends Fragment {
                                         int groupPosition, int childPosition, long id) {
                 /*Toast.makeText(SubsListFragment.this.getActivity(),"Hola", Toast.LENGTH_SHORT).show();
                 return false;*/
-                Intent myIntent = new Intent(getActivity(), testscreen.class);
+                Intent myIntent = new Intent(getActivity(), adminlistuser.class);
                 startActivity(myIntent);
                 return false;
             }
@@ -127,7 +127,7 @@ public class AdminListFragment extends Fragment {
                 LayoutInflater inflater2 = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 groupV = inflater2.inflate(R.layout.subslist_group,null);
             }
-            TextView textView = (TextView) groupV.findViewById(R.id.subslistgrouprow);
+            TextView textView = (TextView) groupV.findViewById(R.id.grouptextview);
             textView.setText(getGroup(i).toString());
 
             /*TextView textView = new TextView(SubsListFragment.this.getActivity());
@@ -142,7 +142,7 @@ public class AdminListFragment extends Fragment {
                 LayoutInflater inflater2 = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 childV = inflater2.inflate(R.layout.subslist_child,null);
             }
-            TextView textView = (TextView) childV.findViewById(R.id.subslistchildrow);
+            TextView textView = (TextView) childV.findViewById(R.id.childtextview);
             textView.setText(getChild(i, i1).toString());
 
             return childV;

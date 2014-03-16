@@ -9,7 +9,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.tfc.patxangueitor.testscreen;
+import com.tfc.patxangueitor.subslistuser;
 
 
 public class SubsListFragment extends Fragment{
@@ -29,7 +29,7 @@ public class SubsListFragment extends Fragment{
                                         int groupPosition, int childPosition, long id) {
                 /*Toast.makeText(SubsListFragment.this.getActivity(),"Hola", Toast.LENGTH_SHORT).show();
                 return false;*/
-                Intent myIntent = new Intent(getActivity(), testscreen.class);
+                Intent myIntent = new Intent(getActivity(), subslistuser.class);
                 startActivity(myIntent);
                 return false;
             }
@@ -109,7 +109,7 @@ public class SubsListFragment extends Fragment{
                 LayoutInflater inflater2 = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 groupV = inflater2.inflate(R.layout.subslist_group,null);
             }
-            TextView textView = (TextView) groupV.findViewById(R.id.subslistgrouprow);
+            TextView textView = (TextView) groupV.findViewById(R.id.grouptextview);
             textView.setText(getGroup(i).toString());
 
             /*TextView textView = new TextView(SubsListFragment.this.getActivity());
@@ -124,7 +124,7 @@ public class SubsListFragment extends Fragment{
                 LayoutInflater inflater2 = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 childV = inflater2.inflate(R.layout.subslist_child,null);
             }
-            TextView textView = (TextView) childV.findViewById(R.id.subslistchildrow);
+            TextView textView = (TextView) childV.findViewById(R.id.childtextview);
             textView.setText(getChild(i, i1).toString());
 
             return childV;
